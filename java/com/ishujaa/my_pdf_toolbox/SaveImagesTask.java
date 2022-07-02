@@ -44,6 +44,5 @@ public class SaveImagesTask extends Task<Void> {
     @Override
     protected void succeeded() {
         super.succeeded();
-
     }
 }

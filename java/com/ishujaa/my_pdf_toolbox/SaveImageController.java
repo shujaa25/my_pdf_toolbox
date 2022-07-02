@@ -3,7 +3,6 @@ package com.ishujaa.my_pdf_toolbox;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
-import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Orientation;
@@ -113,7 +112,7 @@ public class SaveImageController implements Initializable {
 
             }
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            AlertBox.display("Exception", e.getMessage());
         }
     }
 
@@ -129,23 +128,21 @@ public class SaveImageController implements Initializable {
                                     formatComboBox.getSelectionModel().getSelectedItem().toString(),
                                     exportFolder.getAbsolutePath());
 
-                            FXWaitBox.display(task);
-
-
+                            WaitBox.display(task);
                         }catch (Exception e){
-                            System.out.println(e.getMessage());
+                            AlertBox.display("Exception", e.getMessage());
                         }
                     }else{
-                        System.out.println("Please select output folder.");
+                        AlertBox.display("Alert", "Please select output folder.");
                     }
                 }else{
-                    System.out.println("Please select the export format.");
+                    AlertBox.display("Alert", "Please select the export format.");
                 }
             }else{
-                System.out.println("Please select at least one page.");
+                AlertBox.display("Alert", "Please select at least one page.");
             }
         }else {
-            System.out.println("Please load a pdf.");
+            AlertBox.display("Alert", "Please load a pdf.");
         }
     }
 
