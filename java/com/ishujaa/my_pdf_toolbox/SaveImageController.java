@@ -125,7 +125,7 @@ public class SaveImageController implements Initializable {
                     if(exportFolder != null){
                         try{
                             SaveImagesTask task = new SaveImagesTask(helper.getPdDocument(),
-                                    helper.getPagesCount(), Integer.parseInt(dpiTextField.getText()),
+                                    currentSelection, Integer.parseInt(dpiTextField.getText()),
                                     formatComboBox.getSelectionModel().getSelectedItem().toString(),
                                     exportFolder.getAbsolutePath());
 

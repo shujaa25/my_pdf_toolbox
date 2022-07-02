@@ -1,6 +1,8 @@
 package com.ishujaa.my_pdf_toolbox;
 
+import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
+import javafx.stage.Stage;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 
@@ -11,12 +13,13 @@ import java.util.Locale;
 
 public class SaveImagesTask extends Task<Void> {
     PDDocument pdDocument;
-    int pageCount;
+    ObservableList<Integer> selectedPages;
     int dpi;
     String format;
     String exportLocation;
-    SaveImagesTask(PDDocument pdDocument, int pagesCount, int dpi, String format, String exportLocation){
-        this.pageCount = pagesCount;
+    SaveImagesTask(PDDocument pdDocument, ObservableList<Integer> selectedPages,
+                   int dpi, String format, String exportLocation){
+        this.selectedPages = selectedPages;
         this.pdDocument = pdDocument;
         this.exportLocation = exportLocation;
         this.dpi = dpi;
@@ -27,12 +30,20 @@ public class SaveImagesTask extends Task<Void> {
     protected Void call() throws Exception {
 
         PDFRenderer renderer = new PDFRenderer(pdDocument);
-        for(int i=0; i<pageCount; i++){
-            BufferedImage bufferedImage = renderer.renderImageWithDPI(i, dpi);
-            ImageIO.write(bufferedImage, format, new File(exportLocation + "\\Page " + (i+1)+"."+format.toLowerCase(Locale.ROOT)));
-            updateProgress(i, pageCount);
+        int pagesProcessed=0;
+        for(Integer page: selectedPages){
+            BufferedImage bufferedImage = renderer.renderImageWithDPI(page, dpi);
+            ImageIO.write(bufferedImage, format, new File(exportLocation + "\\Page " + (page+1)+"."+format.toLowerCase(Locale.ROOT)));
+            updateProgress(pagesProcessed+1, selectedPages.size());
+            pagesProcessed+=1;
         }
 
         return null;
+    }
+
+    @Override
+    protected void succeeded() {
+        super.succeeded();
+
     }
 }
