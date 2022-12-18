@@ -1,5 +1,6 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Dialogs;
 
+import com.ishujaa.my_pdf_toolbox.Dialogs.AlertBox;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.EventHandler;

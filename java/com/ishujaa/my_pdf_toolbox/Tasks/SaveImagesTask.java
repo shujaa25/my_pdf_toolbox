@@ -1,4 +1,4 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Tasks;
 
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
@@ -17,8 +17,8 @@ public class SaveImagesTask extends Task<Void> {
     int dpi;
     String format;
     String exportLocation;
-    SaveImagesTask(PDDocument pdDocument, ObservableList<Integer> selectedPages,
-                   int dpi, String format, String exportLocation){
+    public SaveImagesTask(PDDocument pdDocument, ObservableList<Integer> selectedPages,
+                          int dpi, String format, String exportLocation){
         this.selectedPages = selectedPages;
         this.pdDocument = pdDocument;
         this.exportLocation = exportLocation;

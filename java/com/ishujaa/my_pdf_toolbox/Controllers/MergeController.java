@@ -1,5 +1,7 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Controllers;
 
+import com.ishujaa.my_pdf_toolbox.Dialogs.WaitBox;
+import com.ishujaa.my_pdf_toolbox.Tasks.MergeTask;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

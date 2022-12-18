@@ -1,4 +1,4 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Dialogs;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

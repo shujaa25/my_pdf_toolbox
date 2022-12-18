@@ -1,5 +1,9 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Controllers;
 
+import com.ishujaa.my_pdf_toolbox.Dialogs.AlertBox;
+import com.ishujaa.my_pdf_toolbox.Dialogs.WaitBox;
+import com.ishujaa.my_pdf_toolbox.Extras.Helper;
+import com.ishujaa.my_pdf_toolbox.Tasks.SaveImagesTask;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;

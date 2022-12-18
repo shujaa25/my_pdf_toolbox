@@ -1,4 +1,4 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Tasks;
 
 import javafx.concurrent.Task;
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
@@ -11,7 +11,7 @@ public class MergeTask extends Task<Void> {
     private String destFileName;
     private List<File> files;
 
-    MergeTask(String destFileName, List<File> files){
+    public MergeTask(String destFileName, List<File> files){
         this.destFileName = destFileName;
         this.files = files;
     }

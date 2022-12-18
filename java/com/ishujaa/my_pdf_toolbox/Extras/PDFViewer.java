@@ -1,4 +1,4 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Extras;
 import org.icepdf.ri.common.ComponentKeyBinding;
 import org.icepdf.ri.common.MyAnnotationCallback;
 import org.icepdf.ri.common.SwingController;
@@ -12,7 +12,7 @@ import java.io.File;
 
 public class PDFViewer extends JFrame{
     //JScrollPane jScrollPane;
-    PDFViewer(){
+    public PDFViewer(){
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");

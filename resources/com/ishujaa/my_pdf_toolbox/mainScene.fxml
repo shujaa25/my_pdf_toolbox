@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ishujaa.my_pdf_toolbox.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ishujaa.my_pdf_toolbox.Controllers.MainController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -58,7 +58,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button layoutX="218.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="225.0" text="Add New Page">
+            <Button layoutX="218.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnRemoveClick" prefHeight="100.0" prefWidth="225.0" text="Remove Pages">
                <font>
                   <Font size="24.0" />
                </font>

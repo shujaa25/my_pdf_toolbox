@@ -1,5 +1,7 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Controllers;
 
+import com.ishujaa.my_pdf_toolbox.MainApplication;
+import com.ishujaa.my_pdf_toolbox.Extras.PDFViewer;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -40,6 +42,18 @@ public class MainController {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setMinWidth(600);
+        stage.setMinHeight(400);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Merge PDFs");
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    protected void btnRemoveClick() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("removeScene.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setMinWidth(250);
         stage.setMinHeight(400);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("Merge PDFs");

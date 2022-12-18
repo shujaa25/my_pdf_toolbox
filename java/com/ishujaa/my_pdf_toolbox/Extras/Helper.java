@@ -1,4 +1,4 @@
-package com.ishujaa.my_pdf_toolbox;
+package com.ishujaa.my_pdf_toolbox.Extras;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 
@@ -11,7 +11,7 @@ import java.util.Locale;
 public class Helper {
     private PDDocument pdDocument;
     public int pageCount;
-    Helper(File file) throws IOException {
+    public Helper(File file) throws IOException {
         pdDocument = PDDocument.load(file);
         pageCount = pdDocument.getPages().getCount();
 
