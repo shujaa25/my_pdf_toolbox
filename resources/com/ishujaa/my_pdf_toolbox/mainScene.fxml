@@ -48,7 +48,7 @@
                   <Font size="24.0" />
                </font>
             </Button>
-            <Button layoutX="114.0" layoutY="10.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="225.0" text="Merge PDFs">
+            <Button layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnMergeClick" prefHeight="100.0" prefWidth="225.0" text="Merge PDFs">
                <font>
                   <Font size="24.0" />
                </font>

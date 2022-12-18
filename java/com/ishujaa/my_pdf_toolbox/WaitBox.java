@@ -57,14 +57,14 @@ public class WaitBox {
             @Override
             public void handle(WorkerStateEvent workerStateEvent) {
                 stage.close();
-                AlertBox.display("Successfully", "All pages are successfully saved.");
+                AlertBox.display("Successfully", "Task executed successfully.");
             }
         });
         task.setOnFailed(new EventHandler<WorkerStateEvent>() {
             @Override
             public void handle(WorkerStateEvent workerStateEvent) {
                 stage.close();
-                AlertBox.display("Failed", "Unable to save the images.");
+                AlertBox.display("Failed", "Unable to complete the task.");
             }
         });
         task.setOnCancelled(new EventHandler<WorkerStateEvent>() {

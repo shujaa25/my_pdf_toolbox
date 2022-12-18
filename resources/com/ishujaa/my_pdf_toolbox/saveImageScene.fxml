@@ -11,9 +11,11 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ishujaa.my_pdf_toolbox.SaveImageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="440.0" minWidth="816.0" prefHeight="440.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ishujaa.my_pdf_toolbox.SaveImageController">
    <top>
       <FlowPane prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -36,78 +38,56 @@
       </FlowPane>
    </top>
    <center>
-      <ScrollPane fx:id="scrollPane" BorderPane.alignment="CENTER" />
+      <ScrollPane fx:id="scrollPane" prefHeight="356.0" prefWidth="579.0" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
-      <GridPane prefHeight="39.0" prefWidth="750.0" BorderPane.alignment="TOP_LEFT">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.4000244140625" minWidth="10.0" prefWidth="39.80001220703125" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="224.9999656677246" minWidth="10.0" prefWidth="68.59998779296875" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.79998779296875" minWidth="10.0" prefWidth="146.19998168945312" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0000122070312" minWidth="10.0" prefWidth="129.1999969482422" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.8000122070313" minWidth="10.0" prefWidth="251.39999999999998" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <HBox prefHeight="34.0" prefWidth="750.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="18.0" prefWidth="34.0" text="DPI:">
-               <GridPane.margin>
-                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-               </GridPane.margin>
+            <Label prefHeight="18.0" prefWidth="34.0" text="DPI:" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
             </Label>
-            <TextField fx:id="dpiTextField" prefHeight="26.0" prefWidth="54.0" text="300" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-               </GridPane.margin>
-            </TextField>
-            <ComboBox fx:id="formatComboBox" prefHeight="26.0" prefWidth="150.0" promptText="Select Fromat" GridPane.columnIndex="2">
-               <GridPane.margin>
-                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-               </GridPane.margin>
-            </ComboBox>
-            <Button fx:id="s" mnemonicParsing="false" onAction="#btnSelectExportFolderClick" text="Select Export Folder" GridPane.columnIndex="3">
-               <GridPane.margin>
-                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-               </GridPane.margin>
-            </Button>
-            <Label fx:id="exportFolderLabel" prefHeight="18.0" prefWidth="215.0" style="-fx-font-weight: bold;" text="no folder selected" wrapText="true" GridPane.columnIndex="4">
-               <GridPane.margin>
-                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-               </GridPane.margin>
+            <TextField fx:id="dpiTextField" prefHeight="26.0" prefWidth="54.0" text="300" HBox.hgrow="ALWAYS" />
+            <ComboBox fx:id="formatComboBox" prefHeight="26.0" prefWidth="150.0" promptText="Select Fromat" HBox.hgrow="ALWAYS" />
+            <Button fx:id="s" mnemonicParsing="false" onAction="#btnSelectExportFolderClick" text="Select Export Folder" HBox.hgrow="ALWAYS" />
+            <Label fx:id="exportFolderLabel" prefHeight="18.0" prefWidth="215.0" style="-fx-font-weight: bold;" text="no folder selected" wrapText="true" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
             </Label>
-            <Button mnemonicParsing="false" onAction="#btnExportClick" prefHeight="26.0" prefWidth="128.0" text="Export" GridPane.columnIndex="5">
-               <GridPane.margin>
-                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-               </GridPane.margin>
-            </Button>
+            <Button mnemonicParsing="false" onAction="#btnExportClick" prefHeight="26.0" prefWidth="128.0" text="Export" HBox.hgrow="ALWAYS" />
          </children>
          <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
-      </GridPane>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
    </bottom>
    <left>
-      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="104.00000610351563" minHeight="0.0" prefHeight="9.599975585937498" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="272.0000244140625" minHeight="10.0" prefHeight="272.0000244140625" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <VBox prefHeight="356.0" prefWidth="226.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="18.0" prefWidth="93.0" text="Select the pages:" GridPane.columnSpan="2" />
-            <ListView fx:id="pagesListView" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#btnSelectAllClick" prefHeight="26.0" prefWidth="91.0" text="Select All" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#btnDeselectAllClick" prefHeight="26.0" prefWidth="82.0" text="Deselect All" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="18.0" prefWidth="93.0" text="Select the pages:" />
+            <ListView fx:id="pagesListView" prefHeight="286.0" prefWidth="217.0" VBox.vgrow="ALWAYS" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnSelectAllClick" prefHeight="26.0" prefWidth="120.0" text="Select All" />
+                  <Button mnemonicParsing="false" onAction="#btnDeselectAllClick" prefHeight="26.0" prefWidth="114.0" text="Deselect All" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
          </children>
          <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
-      </GridPane>
+      </VBox>
    </left>
 </BorderPane>
